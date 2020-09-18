@@ -6,6 +6,9 @@
 # Intellij
 **/*/.idea
 
+# Intellij
+/.idea
+
 # Compiled class file
 *.class
 
