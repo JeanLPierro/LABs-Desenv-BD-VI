@@ -7,15 +7,19 @@ public class SorteioTest {
 
     @Test
     public void deveRetornarRespostaPositiva(){
-        Sorteio sorteio = new SorteioFun();
+        SorteioFun sorteio = new SorteioFun();
+        sorteio.setNum(8);              //Seta numero do cupom do usuario
+        sorteio.setNumPremiado(8);      //Seta numero premiado
 
-        Assert.assertEquals("Sim", sorteio.getResp(80,80));
+        Assert.assertEquals("Sim", sorteio.getResp()); // Resultado esperado
     }
 
     @Test
     public void deveRetornarRespostaNegativa(){
-        Sorteio sorteio = new SorteioFun();
+        SorteioFun sorteio = new SorteioFun();
+        sorteio.setNum(5);              //Seta numero do cupom do usuario
+        sorteio.setNumPremiado(2);      //Seta numero premiado
 
-        Assert.assertEquals("Nao", sorteio.getResp(35,42));
+        Assert.assertEquals("Nao", sorteio.getResp()); // Resultado esperado
     }
 }

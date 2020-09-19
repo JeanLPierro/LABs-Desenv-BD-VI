@@ -1,5 +1,6 @@
 package sorteio.model;
 
+
 public class SorteioFun implements Sorteio{
     private int num;
     private int numPremiado;
@@ -25,10 +26,10 @@ public class SorteioFun implements Sorteio{
     }
 
     @Override
-    public String getResp(int num, int numPremiado) {
-        if (num != numPremiado){
+    public String getResp() {                       //Metodo que gera a resposta ao usuario
+        if (getNum() != getNumPremiado()){
             this.resp = "Nao";
-        }else if (num == numPremiado){
+        }else if (getNum() == getNumPremiado()){
             this.resp = "Sim";
         }
         return this.resp;
